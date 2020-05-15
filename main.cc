@@ -21,6 +21,54 @@ void changeFilesPermissions()
 // Start files manager
 void initFileManagement()
 {
+    char s[10];
+	char command[100];
+	int choose;
+	do
+	{
+	printf("please, enter your operation : \n");
+	printf("1_to make directory.\n");
+	printf("2_to remove directory.\n");
+	printf("3_to make file.\n");
+	printf("4_to remove file.\n");
+	printf("5_to exist.\n");
+	scanf("%d",&choose);
+	switch(choose)
+	{
+	case 1 :
+		printf("enter your directory name : ");
+		scanf("%s",&s);
+		strcpy(command,"mkdir");
+		strcat(command," ");
+		strcat(command,s);
+		system(command);
+		break;
+	case 2 :
+		printf("enter your directory name you want remove : ");
+		scanf("%s",&s);
+		strcpy(command,"rmdir");
+		strcat(command," ");
+		strcat(command,s);
+		system(command);
+		break;
+	case 3 :
+		printf("enter your file name with extention : ");
+		scanf("%s",&s);
+		strcpy(command,"touch");
+		strcat(command," ");
+		strcat(command,s);
+		system(command);
+		break;
+	case 4 :
+		printf("enter your file name you want remove : ");
+		scanf("%s",&s);
+		strcpy(command,"rm");
+		strcat(command," ");
+		strcat(command,s);
+		system(command);
+		break;
+	}
+	}while(choose!=5);
 }
 // End files manager
 // Start symblic link files
