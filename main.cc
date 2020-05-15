@@ -15,6 +15,20 @@ void listFilesAndFolders()
 // Start premissions changer.
 void changeFilesPermissions()
 {
+	// List files & folders
+	cout<< "\n\n";
+	system("ls -s");
+	
+	// Get File/Directory name
+	cout << "\nEnter your desired File/Directory name\n";
+	string name;
+	cin>>name;
+	
+	// Check if this is a valid name
+	if ([ -f "mm.txt" ] && [ -d "mm.txt" ]){
+		cout<< "hiii";
+	}
+	
 }
 // End premissions changer.
 
