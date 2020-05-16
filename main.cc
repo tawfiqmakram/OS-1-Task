@@ -10,6 +10,7 @@ void handleSystem(int);
 // Start files and folders lister.
 void listFilesAndFolders()
 {
+    system("ls -l");
 }
 // End files and folders lister.
 // Start premissions changer.
